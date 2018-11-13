@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native'
 import ProductsList from './products-list';
 import { SHOES } from './data';
 import { connect } from 'react-redux';
+import { ADD_TO_CART } from './actionsTypes/cart-action-types';
 
 class ShoesScreen extends Component {
     render() {
@@ -17,7 +18,7 @@ class ShoesScreen extends Component {
 const mapDispatchToProsp = ( dispatch ) => {
     return {
         addItemToCart: ( product ) => dispatch({
-            type: 'ADD_TO_CART',
+            type: ADD_TO_CART,
             payload: product
         })
     }

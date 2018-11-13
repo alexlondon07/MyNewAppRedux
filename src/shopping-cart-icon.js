@@ -2,6 +2,7 @@ import React from 'react';
 import { View , StyleSheet } from 'react-native';
 import { Badge, Icon, Text, Button } from 'native-base';
 import { connect } from 'react-redux';
+import { withNavigation } from 'react-navigation';
 
 const ShoppingCarIcon =  props => (
     <View style ={ styles.container }>
@@ -16,7 +17,7 @@ const ShoppingCarIcon =  props => (
 
 const mapDispatchToProsp = ( state ) => {
     return {
-        cartItems: state
+        cartItems: state.cart
     }
 }
 
@@ -41,4 +42,4 @@ const styles = StyleSheet.create({
 })
 
 
-export default connect(mapDispatchToProsp, null)(ShoppingCarIcon);
+export default connect(mapDispatchToProsp, null)(withNavigation(ShoppingCarIcon));

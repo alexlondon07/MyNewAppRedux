@@ -3,6 +3,7 @@ import { StyleSheet, View } from 'react-native'
 import { TECHNOLOGY } from './data';
 import ProductsList from './products-list';
 import { connect } from 'react-redux';
+import { ADD_TO_CART } from './actionsTypes/cart-action-types';
 
 class TechnologyScreen extends Component {
     render() {
@@ -17,7 +18,7 @@ class TechnologyScreen extends Component {
 const mapDispatchToProsp = ( dispatch ) => {
     return {
         addItemToCart: ( product ) => dispatch({
-            type: 'ADD_TO_CART',
+            type: ADD_TO_CART,
             payload: product
         })
     }
