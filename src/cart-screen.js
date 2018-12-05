@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import ProductList from './products-list';
 import { connect } from 'react-redux';
 import { removeProductToCart } from './actions/cart-action-creator';
@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
 
 const mapStateToProsp = (state) => {
     return {
-        cartItems: state.cart
+        cartItems: state.get('cart').toArray() //replace toJS method
     }
 }
 const mapDispatchToProsp =( dispatch ) => {

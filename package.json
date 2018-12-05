@@ -8,12 +8,14 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.1.2",
+    "immutable": "^4.0.0-rc.12",
     "native-base": "^2.8.1",
     "react": "16.5.0",
     "react-native": "0.57.1",
     "react-navigation": "^2.18.2",
     "react-redux": "^5.1.0",
-    "redux": "^4.0.1"
+    "redux": "^4.0.1",
+    "redux-immutable": "^4.0.0"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",

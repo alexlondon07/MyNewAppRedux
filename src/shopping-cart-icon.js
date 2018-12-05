@@ -7,9 +7,12 @@ import { withNavigation } from 'react-navigation';
 const ShoppingCarIcon =  props => (
     <View style ={ styles.container }>
         <Button iconLeft transparent primary>
-            <Icon name='md-cart' />
+            <Icon 
+                name='md-cart' 
+                onPress = { ()=> props.navigation.navigate('Cart') }
+            />
             <Badge>
-                <Text> { props.cartItems.length } </Text>
+                <Text> { props.cartItems.size } </Text>
             </Badge>
         </Button>        
     </View>
@@ -17,7 +20,7 @@ const ShoppingCarIcon =  props => (
 
 const mapDispatchToProsp = ( state ) => {
     return {
-        cartItems: state.cart
+        cartItems: state.get('cart')
     }
 }
 
